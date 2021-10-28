@@ -11,6 +11,7 @@ import Appointment from "components/Appointment/index";
 import Header from "components/Appointment/Header";
 import Empty from "components/Appointment/Empty";
 import Show from "components/Appointment/Show";
+import Confirm from "components/Appointment/Confirm";
 
 import "index.scss";
 
@@ -76,7 +77,19 @@ storiesOf("Button", module)
       <DayList days={days} value={"Wednesday"} onChange={action("setDay")} />
     ));
 
-    
+    // storiesOf("DayList", module)
+    // .addParameters({
+    //   backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
+    // })
+    // .add("Monday", () => (
+    //   <DayList days={days} day={"Monday"} setDay={action("setDay")} />
+    // ))
+    // .add("Tuesday", () => (
+    //   <DayList days={days} day={"Tuesday"} setDay={action("setDay")} />
+    // ))
+    // .add("Wednesday", () => (
+    //     <DayList days={days} day={"Wednesday"} setDay={action("setDay")} />
+    // ));
 
 
     // For InterviewerListItem
@@ -147,7 +160,28 @@ storiesOf("Button", module)
         />
       ));
       
-     
+      // storiesOf("InterviewerList", module)
+      //   .addParameters({
+      //     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+      //   })
+      //   .add("Initial", () => (
+      //     <InterviewerList
+      //       interviewers={interviewers}
+      //     />
+      //   ))
+      //   .add("Selected", () => (
+      //     <InterviewerList
+      //       interviewers={interviewers}
+      //       interviewer={3}
+      //     />
+      //   ))
+      //   .add("Clickable", () => (
+      //     <InterviewerList
+      //       interviewers={interviewers}
+      //       setInterviewer={action("setInterviewer")}
+      //     />
+      //   ));
+      
     // For Appointment Component
     storiesOf("Appointment", module)
       .addParameters({
@@ -165,7 +199,13 @@ storiesOf("Button", module)
         onDelete={action("onDelete")}
       />
       ))
-      
+      .add("Confirm", () => (
+      <Confirm 
+        message="Delete the appointment?"
+        onConfirm={action("onConfirm")}
+        onCancel={action("onCancel")}
+      />
+      ))
       
      
 
