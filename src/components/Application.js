@@ -57,10 +57,6 @@ export default function Application(props) {
         ...state,
         appointments
       });
-      
-    })
-    .catch(error => {
-      console.log(error)
     })
   }
 
@@ -84,9 +80,8 @@ export default function Application(props) {
       });
       
     })
-    .catch(error => {
-      console.log(error)
-    })
+    
+    
   }
 
   const appointments = getAppointmentsForDay(state, state.day);
