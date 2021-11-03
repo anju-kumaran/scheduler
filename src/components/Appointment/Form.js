@@ -10,7 +10,7 @@ export default function Form(props){
 
   function reset() {
     setStudent('');
-    setInterviewer('');
+    setInterviewer(null);
   }
   function cancel() {
     reset();
@@ -36,8 +36,12 @@ export default function Form(props){
             type="text"
             placeholder="Enter Student Name"
             value={student}
-            onChange={(event) => setStudent(event.target.value)}
+            onChange={event => {
+              setStudent(event.target.value);
+            }}
+            data-testid="student-name-input"
           />
+          <section className="appointment__validation">{error}</section>
         </form>
         <InterviewerList 
           interviewers={props.interviewers}
@@ -50,7 +54,6 @@ export default function Form(props){
           <Button danger onClick={cancel}>Cancel</Button>
           <Button confirm onClick={validate}>Save</Button>
           {/* <Button confirm onClick={() => props.onSave(student, interviewer)}>Save</Button> */}
-
         </section>
       </section>
     </main>
