@@ -29,6 +29,12 @@ export default function useApplicationData(){
     })
   }, []);
 
+  // Updates remaining spots in days after any appointment is changed
+  useEffect(() => {
+    axios.get("/api/days")
+      .then(days => setState(state => ({ ...state, days: days.data })));
+  }, [state.appointments])
+
   function bookInterview(id, interview) {
     console.log(id, interview);
     const appointment = {
