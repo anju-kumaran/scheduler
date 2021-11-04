@@ -39,7 +39,6 @@ export default function Application(props) {
         />
         <hr className="sidebar__separator sidebar--centered" />
         <nav className="sidebar__menu">
-          {/* <DayList days={days} value={day} setDay={setDay} /> */}
           <DayList days={state.days} value={state.day} setDay={setDay} />  
         </nav>
         <img
@@ -49,7 +48,6 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        {/* {schedule} */}
         {appointments}
         <Appointment key="last" time="5pm" />
       </section>

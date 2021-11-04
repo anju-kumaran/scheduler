@@ -50,7 +50,6 @@ export default function useApplicationData(){
     .put(`/api/appointments/${id}`, appointment
     )
     .then(response => {
-      //console.log('++++',response)
       setState({
         ...state,
         appointments
