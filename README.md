@@ -4,14 +4,11 @@ This is a single page application (SPA) called Interview Scheduler, built using 
 
 ## Screenshots
 
-View Appointments
-[https://github.com/anju-kumaran/scheduler/blob/master/docs/view-appointment.png]
+!["View Appointments"](https://github.com/anju-kumaran/scheduler/blob/master/docs/view-appointment.png)
 
-Interview Create/Edit Form
-[https://github.com/anju-kumaran/scheduler/blob/master/docs/add-edit.png]
+!["Interview Create/Edit Form"](https://github.com/anju-kumaran/scheduler/blob/master/docs/add-edit.png)
 
-Confirmation When Attempt To Delete Interview
-[https://github.com/anju-kumaran/scheduler/blob/master/docs/cancel-appoinment.png]
+!["Confirmation When Attempt To Delete Interview"](https://github.com/anju-kumaran/scheduler/blob/master/docs/cancel-appoinment.png)
 
 
 ## Setup
